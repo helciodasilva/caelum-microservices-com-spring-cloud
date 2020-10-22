@@ -13,16 +13,16 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import br.com.caelum.eats.model.Role;
-import br.com.caelum.eats.service.JwtAuthenticationEntryPoint;
-import br.com.caelum.eats.service.JwtAuthenticationFilter;
-import br.com.caelum.eats.service.UserService;
+import br.com.caelum.eats.seguranca.JwtAuthenticationEntryPoint;
+import br.com.caelum.eats.seguranca.JwtAuthenticationFilter;
+import br.com.caelum.eats.seguranca.Role;
+import br.com.caelum.eats.seguranca.UserService;
 import lombok.AllArgsConstructor;
 
 @Configuration
 @EnableWebSecurity
 @AllArgsConstructor
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	private UserService userService;
 	private JwtAuthenticationFilter jwtAuthenticationFilter;
